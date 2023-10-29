@@ -16,10 +16,10 @@ const App = () => {
     if(tours.length === 0){
       return(
 
-        <div>
-          <h2>No Tours left</h2>
-          <button onClick={()=>{
-            setTours(data);
+        <div className="refresh">
+          <h2>No Tours <span>Left</span></h2>
+          <button className="btn-white" onClick={()=>{
+            setTours(data); 
           }}>
             Refresh
           </button>
@@ -29,7 +29,7 @@ const App = () => {
     }
 
   return  (
-    <div>
+    <div className="App">
       <Tours tours={tours} removeTour = {removeTour}></Tours>
     </div> 
   )
