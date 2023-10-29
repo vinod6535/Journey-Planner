@@ -4,6 +4,7 @@ import Card from "./Card";
 function Tours({tours,removeTour}) {
   return (
     <div>
+      
       <div>
         <h2>The Planning</h2>
       </div>

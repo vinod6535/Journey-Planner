@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-function Card({id,image,info,name,price}, removeTour){
+function Card({id,image,info,name,price, removeTour}){
 
-    const description = '${info.substring(0,200)}....';
+
     const [readmore,setReadMore] = useState(false);
+    const description = readmore ? info : `${info.substring(0,200)}....`;
+
     function readmoreHandler(){
         setReadMore(!readmore); 
     }
-
-     
 
     return(
         <div className="card">
